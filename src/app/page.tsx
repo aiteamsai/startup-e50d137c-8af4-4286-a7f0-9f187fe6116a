@@ -1,15 +1,20 @@
-import React from 'react'
+// pages/index.tsx
+import { NextPage } from "next";
+import { useRouter } from 'next/router';
 
-interface Props {
-  
-}
+const HomePage: NextPage = () => {
+  const router = useRouter();
 
-const PageName: React.FC<Props> = () => {
-    return (
-        <div>
-            <h1>Welcome to our startup!</h1>
-        </div>
-    )
-}
+  const navigateToPage = (path: string) => {
+     router.push(path);
+  };
 
-export default PageName
+  return (
+    <div> 
+      <button onClick={() => navigateToPage('/route1')}>Navigate to Route 1</button>
+      <button onClick={() => navigateToPage('/route2')}>Navigate to Route 2</button>
+    </div>
+  );
+};
+
+export default HomePage;
