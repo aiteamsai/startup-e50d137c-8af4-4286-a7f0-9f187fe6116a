@@ -1,3 +1,15 @@
-mkdir nextjs-app && cd nextjs-app
-npm init -y
-npm i react react-dom next typescript @types/node @types/react
+import React from 'react'
+
+interface Props {
+  
+}
+
+const PageName: React.FC<Props> = () => {
+    return (
+        <div>
+            <h1>Welcome to our startup!</h1>
+        </div>
+    )
+}
+
+export default PageName
