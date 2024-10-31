@@ -1,20 +1,22 @@
-// pages/index.tsx
-import { NextPage } from "next";
-import { useRouter } from 'next/router';
+// Filename: pages/index.tsx
 
-const HomePage: NextPage = () => {
-  const router = useRouter();
+import Head from "next/head";
+import { FC } from "react";
 
-  const navigateToPage = (path: string) => {
-     router.push(path);
-  };
-
+const Home: FC = () => {
   return (
-    <div> 
-      <button onClick={() => navigateToPage('/route1')}>Navigate to Route 1</button>
-      <button onClick={() => navigateToPage('/route2')}>Navigate to Route 2</button>
+    <div>
+      <Head>
+        <title>Startup Landing Page</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <main>
+        <h1>Welcome to our Startup Page</h1>
+        <p>This is a simple landing page.</p>
+      </main>
     </div>
   );
 };
 
-export default HomePage;
+export default Home;
